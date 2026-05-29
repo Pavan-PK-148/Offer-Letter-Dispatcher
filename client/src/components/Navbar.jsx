@@ -72,7 +72,7 @@ export default function Navbar() {
               <Link to="/step-1" className="text-slate-900 border-b-2 border-indigo-600 py-9 transition-all flex items-center gap-2 no-underline">
                 <Layers size={15} className="text-indigo-600" /> Pipeline Workspace
               </Link>
-              <a href="#history" className="hover:text-slate-900 transition-colors py-9 flex items-center gap-2 no-underline">
+              <a href="/history" className="hover:text-slate-900 transition-colors py-9 flex items-center gap-2 no-underline">
                 <Activity size={15} /> Execution Logs
               </a>
             </div>

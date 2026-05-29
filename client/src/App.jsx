@@ -15,6 +15,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import ProtectedRoute from './components/ProtectedRoute';
+import ExecutionLogs from './pages/ExecutionLogs';
 
 const DashboardLayout = () => {
   const { metrics } = useDispatch();
@@ -86,6 +87,7 @@ const DashboardLayout = () => {
             <Route path="/step-2" element={<ProtectedRoute><Step2_Review /></ProtectedRoute>} />
             <Route path="/step-3" element={<ProtectedRoute><Step3_Template /></ProtectedRoute>} />
             <Route path="/step-4" element={<ProtectedRoute><Step4_Preview /></ProtectedRoute>} />
+            <Route path="/history" element={<ProtectedRoute><ExecutionLogs /></ProtectedRoute>} />
             
             {/* Global Safe Route Redirection */}
             <Route path="*" element={<Navigate to="/" replace />} />

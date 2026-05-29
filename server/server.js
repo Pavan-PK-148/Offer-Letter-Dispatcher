@@ -4,8 +4,8 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const csvRoutes = require('./routes/csvRoutes');
-const dispatchRoutes = require('./routes/dispatchRoutes');
 const mailRoutes = require('./routes/mailRoutes');
+const historyRoutes = require('./routes/historyRoutes');
 
 const app = express();
 
@@ -26,8 +26,8 @@ app.use(express.json());
 // Main Core API Routing Sub-Systems
 app.use('/api/auth', authRoutes);
 app.use('/api/campaign', csvRoutes);
-app.use('/api/dispatch', dispatchRoutes);
 app.use('/api/mail', mailRoutes);
+app.use('/api/history', historyRoutes);
 
 // Base Health Check Route
 app.get('/api/health', (req, res) => {
